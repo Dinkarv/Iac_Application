@@ -1,0 +1,15 @@
+h1, p {
+  font-family: Lato;
+}
+
+.loginForm{
+  width: 500px;
+  max-width: 100%;
+  padding: 100px;
+  margin: auto;
+  text-align: center;
+}
+
+.textBold{
+
+}
