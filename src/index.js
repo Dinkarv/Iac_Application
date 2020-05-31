@@ -9,6 +9,7 @@ import {
   BrowserRouter as Router
 } from 'react-router-dom';
 import Topbar from './Component/UI/Topbar/Topbar';
+import Footer from './Component/UI/Topbar/Footer'
 
 class App extends Component {
   constructor() {
@@ -33,9 +34,11 @@ class App extends Component {
       <div>
         <Topbar/>
         <Router>
-          <Route path='/login' component={Login_Register}/>
-          <Route path='/home' exact component={Home}/>
+          <Route path='/login' exact component={Login_Register}/>
+          <Route path='/home' component={Home}/>
         </Router>
+        <hr/>
+        <Footer/>
       </div>
     );
   }
