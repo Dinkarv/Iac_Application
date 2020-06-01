@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSpinner, faSignInAlt } from '@fortawesome/free-solid-svg-icons'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { Redirect } from 'react-router-dom';
 
 class Route extends Component {
@@ -29,9 +29,8 @@ class Route extends Component {
         } 
         return (
             <div>
-                <FontAwesomeIcon icon={faSpinner} spin/>
-                <FontAwesomeIcon icon={faSignInAlt}/>
-                In Home Comp!
+                <FontAwesomeIcon size="lg" icon={faSpinner} spin/>
+                <h3>Site in Construction!</h3>
             </div>
         )
     }
