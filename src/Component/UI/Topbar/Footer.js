@@ -31,16 +31,18 @@ export class Topbar extends Component {
     }
 
     render() {
-        return (
+        const custStyle = {
+            position: 'relative',
+            marginTop: '-20px',
+            clear: 'both',
+            textAlign: 'center',
+            backgroundColor: 'lightgray'
+        }
 
-            <Navbar color="light" dark expand="lg">
-                <Container >
-                    <Row>
-                        <Col md="6">.col-6</Col>
-                        <Col md="6">2020 © Infosys</Col>
-                    </Row>
-                </Container>
-            </Navbar>
+        return (
+            <footer style={custStyle}>
+                © 2020 Infosys. All Rights Reserved.	
+            </footer>
         );
     }
 }

@@ -21,7 +21,7 @@ class App extends Component {
   }
 
   changeHandle = (e) => {
-    if(e.target.value){
+    if (e.target.value) {
       this.setState({
         mail: e.target.value
       })
@@ -32,11 +32,13 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Topbar/>
-        <Router>
-          <Route path='/login' exact component={Login_Register}/>
-          <Route path='/home' component={Home}/>
-        </Router>
+        <Topbar />
+        <section>
+          <Router>
+            <Route path='/login' exact component={Login_Register} />
+            <Route path='/home' component={Home} />
+          </Router>
+        </section>
         <hr/>
         <Footer/>
       </div>
