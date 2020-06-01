@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Container, Navbar, Row, Col } from 'reactstrap';
-import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
 export class Topbar extends Component {
     constructor(props) {
