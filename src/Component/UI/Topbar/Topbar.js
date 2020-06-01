@@ -31,9 +31,10 @@ export class Topbar extends Component {
       }
     
       render() {
+        
         return (
             
-          <Navbar color="dark" dark expand="lg">
+          <Navbar color='info' dark expand="lg">
             <Container>
               <NavbarBrand href="/">
                 <span> <h4>Infosys IaC Application</h4></span>
