@@ -9,7 +9,8 @@ import {
   BrowserRouter as Router
 } from 'react-router-dom';
 import Topbar from './Component/UI/Topbar/Topbar';
-import Footer from './Component/UI/Topbar/Footer'
+import { Container, Col, Row } from 'reactstrap';
+//import Footer from './Component/UI/Topbar/Footer'
 
 class App extends Component {
   constructor() {
@@ -21,7 +22,7 @@ class App extends Component {
   }
 
   changeHandle = (e) => {
-    if(e.target.value){
+    if (e.target.value) {
       this.setState({
         mail: e.target.value
       })
@@ -30,15 +31,34 @@ class App extends Component {
   }
 
   render() {
+    const divStyle = {
+      height: '100%',
+      position: 'absolute',
+      width: '100%'
+    }
+
+    const innerColmn = {
+      marginTop: '2%'
+    }
+
     return (
       <div>
-        <Topbar/>
-        <Router>
-          <Route path='/login' exact component={Login_Register}/>
-          <Route path='/home' component={Home}/>
-        </Router>
-        <hr/>
-        <Footer/>
+        <div style={divStyle}>
+          <Container fluid={true}>
+            <Row>
+              <Col><Topbar /></Col>
+            </Row>
+            <Row>
+              <Col style={innerColmn}>
+              <Router>
+                <Route path='/login' exact component={Login_Register} />
+                <Route path='/home' component={Home} />
+              </Router>
+            </Col>
+            </Row>
+          </Container>
+          <hr />
+        </div>
       </div>
     );
   }

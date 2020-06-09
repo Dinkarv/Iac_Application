@@ -35,9 +35,9 @@ export class Topbar extends Component {
 
             <Navbar color="light" dark expand="lg">
                 <Container >
-                    <Row>
-                        <Col md="6">.col-6</Col>
-                        <Col md="6">2020 © Infosys</Col>
+                    <Row style={{textAlign: 'center'}}>
+                        <Col md="6"> </Col>
+                        <Col md="6" style={{textAlign: 'center'}}>2020 © Infosys</Col>
                     </Row>
                 </Container>
             </Navbar>

@@ -1,36 +1,36 @@
 import React, { Component } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { Redirect } from 'react-router-dom';
+import NewResource from '../Pages/New_Resource';
 
 class Route extends Component {
-        
 
-         constructor(props){
-            super(props)
-            const token = localStorage.getItem('token')
-            console.log('constr',token)
-            let loggedIn = true
-            if(token == null){
-                loggedIn = false
-            }
+    constructor(props) {
+        super(props)
+        const token = localStorage.getItem('token')
+        console.log('constr', token)
+        let loggedIn = true
+        if (token == null) {
+            loggedIn = false
+        }
 
-            this.state = {
-                loggedIn
-            }
-            
-            
-        } 
-    
-    render(){
-        console.log('home token',this.token);
-         if(this.state.loggedIn===false){
-           return <Redirect to='/login/'/> 
-        } 
+        this.state = {
+            loggedIn
+        }
+
+
+    }
+
+    //<NewResource />
+
+    render() {
+
+        if (this.state.loggedIn === false) {
+            return <Redirect to='/login/' />
+        }
         return (
             <div>
-                <FontAwesomeIcon size="lg" icon={faSpinner} spin/>
-                <h3>Site in Construction!</h3>
+                <h1>Site Under Construction!</h1>
+                
             </div>
         )
     }

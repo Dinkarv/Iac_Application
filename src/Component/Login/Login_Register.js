@@ -10,7 +10,8 @@ export class Login_SignUp extends Component {
         super();
         this.state = {
             isLoginOpen: true,
-            isRegisterOpen: false
+            isRegisterOpen: false,
+            buttonSelected: ''
         }
     }
 
