@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom';
 import NewResource from '../Pages/New_Resource';
+import NewBlueprint from '../Pages/New_Blueprint';
 
 class Route extends Component {
 
@@ -29,8 +30,8 @@ class Route extends Component {
         }
         return (
             <div>
-                <h1>Site Under Construction!</h1>
-                
+                <h5>Home Page Under Construction!</h5>
+                <NewBlueprint/>
             </div>
         )
     }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {Container, Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
-import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { faSignInAlt, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
 export class Topbar extends Component {
     constructor(props) {
@@ -37,14 +37,14 @@ export class Topbar extends Component {
           <Navbar color='info' dark expand="lg">
             <Container>
               <NavbarBrand href="/">
-                <span> <h4>Infosys IaC Application</h4></span>
+                <span> <h4>Infosys IaC Platform</h4></span>
               </NavbarBrand>
               <NavbarToggler onClick={this.toggle}/>
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                   <NavItem>
                   {this.state.isLoginClicked ?
-                  <NavbarBrand onClick={this.clickHandler}>Logout <FontAwesomeIcon icon={faSignInAlt}/></NavbarBrand>:
+                  <NavbarBrand onClick={this.clickHandler}>Logout <FontAwesomeIcon icon={faSignOutAlt}/></NavbarBrand>:
                     <div>
                         <NavbarBrand onClick={this.clickHandler} href="/login">Login <FontAwesomeIcon icon={faSignInAlt}/></NavbarBrand>
                     </div>

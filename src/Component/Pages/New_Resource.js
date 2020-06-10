@@ -82,7 +82,7 @@ class CreateNewResource extends Component {
 
                         <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle.bind(this)}>
                             <DropdownToggle caret>
-                                Dropdown
+                                Platform
                             </DropdownToggle>
                             <DropdownMenu>
                                 {this.countryData.map((e, key) => {
@@ -107,7 +107,7 @@ class CreateNewResource extends Component {
 
                     </FormGroup>
                     <Button
-                        color='info'
+                        color='primary'
                         className='btn-lg btn-block'
                         onClick={this.formSubmitHandler.bind(this)}>Create!</Button>
                 </Form>
