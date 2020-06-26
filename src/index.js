@@ -10,6 +10,8 @@ import {
 } from 'react-router-dom';
 import Topbar from './Component/UI/Topbar/Topbar';
 import { Container, Col, Row } from 'reactstrap';
+import NewResource from './Component/Pages/New_Resource';
+import NewBlueprint from './Component/Pages/New_Blueprint';
 //import Footer from './Component/UI/Topbar/Footer'
 
 class App extends Component {
@@ -37,26 +39,22 @@ class App extends Component {
       width: '100%'
     }
 
-    const innerColmn = {
-      marginTop: '2%'
-    }
 
     return (
       <div>
         <div style={divStyle}>
-          <Container fluid={true}>
+          
             <Row>
-              <Col><Topbar /></Col>
-            </Row>
-            <Row>
-              <Col style={innerColmn}>
+              <Col>
               <Router>
-                <Route path='/login' exact component={Login_Register} />
+                <Route path='/' exact component={Login_Register} />
                 <Route path='/home' component={Home} />
+                <Route path='/newresource' component={NewResource} />
+                <Route path='/blueprint' component={NewBlueprint} />
               </Router>
             </Col>
             </Row>
-          </Container>
+          
           <hr />
         </div>
       </div>

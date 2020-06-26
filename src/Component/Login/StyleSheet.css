@@ -1,0 +1,5 @@
+.boxShadowProp{
+-webkit-box-shadow: -11px 2px 21px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: -11px 2px 21px 1px rgba(0,0,0,0.75);
+box-shadow: -11px 2px 21px 1px rgba(0,0,0,0.75);
+}

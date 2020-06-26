@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import {
     Button, Form, Label, FormGroup, Input, ButtonGroup
 } from 'reactstrap';
-//import PublicComp  from './PublicCompFunc';
+import Topbar from '../UI/Topbar/Home_Topbar/Home_Topbar'
+import {  Row, Col } from 'reactstrap';
 
 const CreateNewBluePrint = (props) => {
-
 
     const resourceTabs = [
         { value: '1', name: 'AWS' },
@@ -23,13 +23,11 @@ const CreateNewBluePrint = (props) => {
     let textStyle = {
         textAlign: 'left'
     }
-    //onDismiss = setVisible(false);
 
     const [cSelected, setCSelected] = useState([]);
     const [rSelected, setRSelected] = useState([]);
     const [bluePrintname, setBluePrintName] = useState('');
     const [bluePrintJsonObject, setbluePrintObject] = useState([]);
-
 
     const onCheckboxBtnClick = (selected) => {
         const index = cSelected.indexOf(selected);
@@ -56,22 +54,14 @@ const CreateNewBluePrint = (props) => {
         console.log('inside submitHandler')
     }
 
-/*     bluePrint = [
-        tabs: { 'AWS', 'GCP'},
-        rsrcs: { 'r1', 'r2'},
-        name: 'BP-1'
-    ]
-    
-                    <p>Selected: {JSON.stringify(cSelected)}</p>
- */
-    console.log("cSelect", cSelected);
-    console.log("rSelect", rSelected);
-
-    console.log('name: ', bluePrintname);
     return (
         <div>
+            <Topbar/>
+            <Row>
+            <Col xs="6">
+                
             <Form className='loginForm'
-                style={{ padding: '45px', borderRadius: '25px', border: '1px solid darkgrey' }}>
+                style={{ padding: '45px', borderRadius: '25px', border: '1px solid darkgrey', marginTop: '20px' }}>
                 <h1 className='font-weight-bold'>Create new Blueprint!</h1>
                 <hr />
                 <FormGroup style={textStyle}>
@@ -121,6 +111,11 @@ const CreateNewBluePrint = (props) => {
                     onClick={submithandler}
                 >Create!</Button>
             </Form>
+            </Col>
+            <Col xs="6">
+               <h3> Available Blueprint lists:</h3>
+            </Col>
+            </Row>
         </div>
     )
 }

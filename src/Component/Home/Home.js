@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom';
 import NewResource from '../Pages/New_Resource';
 import NewBlueprint from '../Pages/New_Blueprint';
+import HomeTopbar from '../UI/Topbar/Home_Topbar/Home_Topbar';
+import { Container, Button, Row, Col } from 'reactstrap';
 
 class Route extends Component {
 
@@ -30,8 +32,15 @@ class Route extends Component {
         }
         return (
             <div>
-                <h5>Home Page Under Construction!</h5>
-                <NewBlueprint/>
+
+                <HomeTopbar />
+                <Row>
+                    <Col xs="6">
+                        <h1>Dashboard Under Construction</h1>
+                    </Col>
+                    <Col xs="6">.</Col>
+                </Row>
+                
             </div>
         )
     }

@@ -4,7 +4,9 @@ import {
     Dropdown, DropdownToggle, DropdownMenu, DropdownItem,
     InputGroupAddon, InputGroup, InputGroupText
 } from 'reactstrap';
+import {  Row, Col } from 'reactstrap';
 //import PublicComp  from './PublicCompFunc';
+import Topbar from '../UI/Topbar/Home_Topbar/Home_Topbar'
 
 class CreateNewResource extends Component {
 
@@ -54,8 +56,11 @@ class CreateNewResource extends Component {
 
         return (
             <div>
-                <Form className='loginForm'
-                 style={{ padding: '50px', borderRadius: '25px', border: '1px solid darkgrey' }}>
+                <Topbar/>
+                <Row>
+                    <Col xs="6">
+                    <Form className='loginForm'
+                 style={{ padding: '50px', borderRadius: '25px', border: '1px solid darkgrey', marginTop: '20px' }}>
                     <h1 className='font-weight-bold'>Create new resource!</h1>
                     <hr />
                     <FormGroup style={this.textStyle}>
@@ -111,6 +116,12 @@ class CreateNewResource extends Component {
                         className='btn-lg btn-block'
                         onClick={this.formSubmitHandler.bind(this)}>Create!</Button>
                 </Form>
+
+                    </Col>
+                    <Col xs="6">
+                        <h3>Available Resources List:</h3>
+                    </Col>
+                </Row>
             </div>
         )
     }
